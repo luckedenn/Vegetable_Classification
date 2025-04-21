@@ -23,10 +23,10 @@ Model CNN menggunakan layer berikut:
 ## 📁 Struktur Direktori
 ```
 vegetable-image-classification/
-├── vegetable_model.zip     # SavedModel format
+├── vegetable_model         # SavedModel format
 ├── vegetable_model.tflite  # TF-Lite format
-├── tfjs_model.zip          # TFJS format
-├── best_model.h5           # Model checkpoint terbaik
+├── tfjs_model              # TFJS format
+├── requirements.txt
 ├── notebook.ipynb          # Notebook training dan evaluasi
 └── README.md
 ```
