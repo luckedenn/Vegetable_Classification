@@ -1,31 +1,40 @@
-# 🥦 Klasifikasi Gambar Sayuran dengan CNN
+# 🥦 Vegetable Image Classification
 
-Proyek ini bertujuan untuk membangun model klasifikasi gambar sayuran menggunakan Convolutional Neural Network (CNN) dengan akurasi tinggi. Dataset yang digunakan berisi lebih dari 21.000 gambar dengan resolusi tidak seragam dan terdiri dari 15 kelas berbeda. Model dilatih menggunakan TensorFlow dan hasil akhirnya disimpan dalam tiga format: SavedModel, TF-Lite, dan TFJS, untuk memastikan kompatibilitas lintas platform (server, mobile, dan web).
+Proyek ini menggunakan Convolutional Neural Network (CNN) untuk mengklasifikasikan gambar sayuran ke dalam 15 kelas berbeda. Dataset diambil dari Kaggle dan berisi lebih dari 21.000 gambar.
 
----
-
-## ✅ Fitur Utama
-
-- ✅ Akurasi tinggi (>95%) pada training dan testing set
-- ✅ Dataset besar (>10.000 gambar)
-- ✅ Terdiri dari ≥ 3 kelas (15 kelas sayuran)
-- ✅ Menggunakan **Callback** (EarlyStopping, ReduceLROnPlateau)
-- ✅ Simpan model ke dalam format **SavedModel**, **TF-Lite**, dan **TFJS**
-- ✅ Bukti inferensi disertakan
-- ✅ Gambar asli tanpa preprocessing resolusi (real-world condition)
+## ✅ Fitur
+- Akurasi tinggi (>95%) pada training dan testing set
+- Augmentasi data otomatis menggunakan `ImageDataGenerator`
+- Model disimpan dalam 3 format:
+  - **SavedModel** (untuk deployment di server/cloud)
+  - **TF-Lite** (untuk mobile apps atau embedded devices)
+  - **TFJS** (untuk dijalankan langsung di browser)
 
 ---
 
-## 🧠 Arsitektur Model CNN
-
-Model menggunakan struktur layer berikut:
-- Convolutional Layer (Conv2D) + MaxPooling2D (3x)
-- Flatten
-- Dense Layer (256 neuron) + Dropout 0.5
-- Output layer: Dense dengan 15 neuron (softmax)
-
-Optimizer: `Adam`  
-Loss Function: `categorical_crossentropy`
+## 🧠 Arsitektur Model
+Model CNN menggunakan layer berikut:
+- 3x Conv2D + MaxPooling2D
+- Flatten + Dense(256) + Dropout(0.5)
+- Output layer dengan aktivasi softmax
 
 ---
 
+## 📁 Struktur Direktori
+```
+vegetable-image-classification/
+├── vegetable_model.zip     # SavedModel format
+├── vegetable_model.tflite  # TF-Lite format
+├── tfjs_model.zip          # TFJS format
+├── best_model.h5           # Model checkpoint terbaik
+├── notebook.ipynb          # Notebook training dan evaluasi
+└── README.md
+```
+
+## 📊 Evaluasi
+- Akurasi Training: >95%
+- Akurasi Validation: >95%
+- Akurasi Testing: >95%
+
+## 📌 Dataset
+Dataset diambil dari Kaggle: [Vegetable Image Dataset](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset)
