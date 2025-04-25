@@ -32,9 +32,9 @@ vegetable-image-classification/
 ```
 
 ## 📊 Evaluasi
-- Akurasi Training: >96.13%
-- Akurasi Validation: >95.70%
-- Akurasi Testing: >98.50%
+- Akurasi Training: >95%
+- Akurasi Validation: >95%
+- Akurasi Testing: >95%
 
 ## 📌 Dataset
 Dataset diambil dari Kaggle: [Vegetable Image Dataset](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset)
